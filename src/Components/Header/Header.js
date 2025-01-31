@@ -14,7 +14,9 @@ const Header = () => {
           <div className="row align-items-center">
             <Logo />
             <CountryDropDown />
-            <Searchbar />
+            <div className="searchBarWrapper">
+              <Searchbar placeholder={"Search for products..."} />
+            </div>
             <CartSection />
           </div>
         </div>
