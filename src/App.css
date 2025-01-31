@@ -158,3 +158,46 @@ header .headerSearch svg {
   border-radius: 50%;
   color: white;
 }
+
+/* navbar */
+
+nav {
+  width: 100%;
+}
+
+.allCatTab Button {
+  width: 70%;
+  background-color: #2bbef9;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.navTab ul {
+  width: 100%;
+}
+
+.navTab ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.navTab ul li a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+  border-radius: 30px;
+}
+
+.navTab ul li a svg {
+  font-size: 22px;
+}
+
+.navTab ul li a:hover {
+  background-color: #f0faff;
+  color: #2bbef9;
+}
