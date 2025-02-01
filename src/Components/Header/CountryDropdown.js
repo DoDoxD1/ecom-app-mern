@@ -17,6 +17,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 function CountryDropDown() {
   const [isOpenModal, setisOpenModal] = useState(false);
   const [selectedTab, setselectedTab] = useState("");
+  const [keyword, setkeyword] = useState("");
   const [countryList, setcountryList] = useState([]);
   const context = useContext(MyContext);
 
@@ -30,15 +31,14 @@ function CountryDropDown() {
   };
 
   function filterList(e) {
-    const keyword = e.target.value.toLowerCase();
-    if (keyword !== "") {
-      const list = countryList.filter((item) => {
-        return item.country.toLowerCase().includes(keyword);
-      });
-      setcountryList(list);
-    } else {
-      setcountryList(context.countryList);
-    }
+    // const keyword =;
+    // const list = countryList.filter((item) => {
+    //   return keyword === ""
+    //     ? item
+    //     : item.country.toLowerCase().includes(keyword);
+    // });
+    // setcountryList(list);
+    setkeyword(e.target.value.toLowerCase());
   }
 
   return (
@@ -79,25 +79,31 @@ function CountryDropDown() {
           <div className="countryList ">
             <ul className="list mt-3 ">
               {countryList?.length !== 0 &&
-                countryList?.map((item, index) => {
-                  return (
-                    <li
-                      className="list-item d-flex justify-content-between w-100"
-                      onClick={() => selectCountry(index)}
-                      key={index}
-                    >
-                      <Button
-                        className={
-                          `${selectedTab === item.country ? "active " : ""}` +
-                          "countryButton d-flex justify-content-between w-100"
-                        }
+                countryList
+                  .filter((item) => {
+                    return keyword === ""
+                      ? item
+                      : item.country.toLowerCase().includes(keyword);
+                  })
+                  .map((item, index) => {
+                    return (
+                      <li
+                        className="list-item d-flex justify-content-between w-100"
+                        onClick={() => selectCountry(index)}
+                        key={index}
                       >
-                        <span className="text">{item.country}</span>{" "}
-                        <Button className="listButton">Min: $150</Button>
-                      </Button>
-                    </li>
-                  );
-                })}
+                        <Button
+                          className={
+                            `${selectedTab === item.country ? "active " : ""}` +
+                            "countryButton d-flex justify-content-between w-100"
+                          }
+                        >
+                          <span className="text">{item.country}</span>{" "}
+                          <Button className="listButton">Min: $150</Button>
+                        </Button>
+                      </li>
+                    );
+                  })}
             </ul>
           </div>
         </div>
