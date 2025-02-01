@@ -1,5 +1,11 @@
+import Homebanner from "../Components/Home/Homebanner";
+
 const Home = () => {
-  return <div className="container mt-3">Home</div>;
+  return (
+    <div className="mt-3 homeBannerSection">
+      <Homebanner />
+    </div>
+  );
 };
 
 export default Home;

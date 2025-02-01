@@ -1,0 +1,22 @@
+.homeBannerSection .slick-arrow {
+  z-index: 100;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  font-weight: 800;
+}
+.homeBannerSection .slick-next {
+  right: 25px;
+}
+.homeBannerSection .slick-prev {
+  left: 25px;
+}
+.homeBannerSection .slick-next::before {
+  font-family: FontAwesome;
+  color: #fff;
+}
+.homeBannerSection .slick-prev::before {
+  font-family: FontAwesome;
+  color: #fff;
+}
