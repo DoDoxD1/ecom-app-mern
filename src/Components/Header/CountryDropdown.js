@@ -25,8 +25,8 @@ function CountryDropDown() {
     setcountryList(context.countryList);
   }, []);
 
-  const selectCountry = (index) => {
-    setselectedTab(countryList[index].country);
+  const selectCountry = (country) => {
+    setselectedTab(country);
     setisOpenModal(false);
   };
 
@@ -43,7 +43,13 @@ function CountryDropDown() {
 
   return (
     <div className="col-sm-2 d-flex-align-items-center part2">
-      <Button id="countryDrop" onClick={() => setisOpenModal(true)}>
+      <Button
+        id="countryDrop"
+        onClick={() => {
+          setisOpenModal(true);
+          setkeyword("");
+        }}
+      >
         <div className="info d-flex flex-column">
           <span className="label">Your Location</span>
           <span className="name">{`${
@@ -89,7 +95,7 @@ function CountryDropDown() {
                     return (
                       <li
                         className="list-item d-flex justify-content-between w-100"
-                        onClick={() => selectCountry(index)}
+                        onClick={() => selectCountry(item.country)}
                         key={index}
                       >
                         <Button
