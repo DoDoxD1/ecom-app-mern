@@ -279,3 +279,34 @@ body {
   background-color: #f0faff;
   color: #2bbef9;
 }
+
+.navTab ul li {
+  position: relative;
+}
+
+.navTab ul li .submenu {
+  position: absolute;
+  margin-top: 20px;
+  top: 100%;
+  left: 0px;
+  min-width: 200px;
+  background-color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navTab ul li .submenu a {
+  display: block;
+  width: 100%;
+  border-radius: 0px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.navTab ul li:hover .submenu {
+  opacity: 1;
+  visibility: inherit;
+}

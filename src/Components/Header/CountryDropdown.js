@@ -23,7 +23,7 @@ function CountryDropDown() {
 
   useEffect(() => {
     setcountryList(context.countryList);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const selectCountry = (country) => {
     setselectedTab(country);

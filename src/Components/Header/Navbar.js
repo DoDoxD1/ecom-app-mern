@@ -38,17 +38,34 @@ function Navbar() {
                   <FaMobileAlt className="mb-1 me-1" />
                   Electronics
                 </Link>
+                <div className="submenu d-flex flex-column shadow ms-3 ">
+                  <Link to="/"> Mobiles</Link>
+                  <Link to="/"> Tablets</Link>
+                  <Link to="/"> Computers</Link>
+                  <Link to="/"> Smart Watches</Link>
+                  <Link to="/"> Refrigerators</Link>
+                </div>
               </li>
               <li>
                 <Link to="/">
                   <FaBagShopping className="mb-1 me-1" />
                   Bags
                 </Link>
+                <div className="submenu d-flex flex-column shadow ms-3 ">
+                  <Link to="/"> Handbag</Link>
+                  <Link to="/"> Women Bags</Link>
+                  <Link to="/"> Men Bags</Link>
+                </div>
               </li>
               <li>
                 <Link to="/">
                   <FaTshirt className="mb-1 me-1" /> Faishon
                 </Link>
+                <div className="submenu d-flex flex-column shadow ms-3 ">
+                  <Link to="/"> Men</Link>
+                  <Link to="/"> Women</Link>
+                  <Link to="/"> Kids</Link>
+                </div>
               </li>
               <li>
                 <Link to="/">
@@ -56,6 +73,12 @@ function Navbar() {
                   <FaBowlFood className="mb-1 me-1" />
                   Grocery
                 </Link>
+                <div className="submenu d-flex flex-column shadow ms-3 ">
+                  <Link to="/"> Daily</Link>
+                  <Link to="/"> Vegetables</Link>
+                  <Link to="/"> Foods</Link>
+                  <Link to="/"> Cafe</Link>
+                </div>
               </li>
               <li>
                 <Link to="/">
