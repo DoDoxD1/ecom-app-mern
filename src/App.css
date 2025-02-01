@@ -243,7 +243,51 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.allCatTab Button {
+nav .catWrapper {
+  position: relative;
+}
+
+nav .sidebarNav ul li a:hover {
+  background: transparent;
+  color: #2bbef9;
+}
+
+nav .catWrapper .sidebarNav {
+  min-width: 230px;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  margin-top: 18px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+nav .catWrapper:hover .sidebarNav {
+  opacity: 1;
+  visibility: inherit;
+}
+
+nav .catWrapper .sidebarNav li {
+  width: 100%;
+  margin-top: 20px;
+}
+
+nav .catWrapper .sidebarNav li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+}
+
+nav .catWrapper .sidebarNav ul {
+  padding: 0px;
+}
+
+.allCatTab Button.allCat {
   width: 70%;
   background-color: #2bbef9;
   color: white;
@@ -252,17 +296,17 @@ body {
   font-weight: 600;
 }
 
-.navTab ul {
+nav ul {
   width: 100%;
 }
 
-.navTab ul li {
+nav ul li {
   text-transform: uppercase;
   list-style-type: none;
   font-size: 15px;
 }
 
-.navTab ul li a {
+nav ul li a {
   padding: 12px 20px;
   text-decoration: none;
   font-weight: 600;
@@ -271,20 +315,20 @@ body {
   border-radius: 30px;
 }
 
-.navTab ul li a svg {
+nav ul li a svg {
   font-size: 22px;
 }
 
-.navTab ul li a:hover {
+nav ul li a:hover {
   background-color: #f0faff;
   color: #2bbef9;
 }
 
-.navTab ul li {
+nav ul li {
   position: relative;
 }
 
-.navTab ul li .submenu {
+nav ul li .submenu {
   position: absolute;
   margin-top: 20px;
   top: 100%;
@@ -295,10 +339,10 @@ body {
   border-bottom-right-radius: 6px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.navTab ul li .submenu a {
+nav ul li .submenu a {
   display: block;
   width: 100%;
   border-radius: 0px !important;
@@ -306,7 +350,7 @@ body {
   font-weight: 600;
 }
 
-.navTab ul li:hover .submenu {
+nav ul li:hover .submenu {
   opacity: 1;
   visibility: inherit;
 }

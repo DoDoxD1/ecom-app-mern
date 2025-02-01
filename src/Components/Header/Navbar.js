@@ -8,6 +8,8 @@ import { IoCall } from "react-icons/io5";
 import { FaBowlFood } from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
+import { GiRunningShoe } from "react-icons/gi";
+import { CgGirl } from "react-icons/cg";
 
 function Navbar() {
   return (
@@ -15,16 +17,58 @@ function Navbar() {
       <div className="container">
         <div className="row">
           <div className="col-sm-3 categories">
-            <div className="allCatTab">
-              <Button className="allCat d-flex justify-content-around">
-                <GiHamburgerMenu />
-                <span className="text">ALL CATEGORIES</span>
-                <FaAngleDown />
-              </Button>
+            <div className="catWrapper">
+              <div className="allCatTab">
+                <Button className="allCat d-flex justify-content-around">
+                  <GiHamburgerMenu />
+                  <span className="text">ALL CATEGORIES</span>
+                  <FaAngleDown />
+                </Button>
+                <div className="sidebarNav shadow ">
+                  <ul className="">
+                    <li>
+                      <Link to="/">
+                        <FaMobileAlt className="mb-1 me-1" /> Electronics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/">
+                        {" "}
+                        <FaTshirt className="mb-1 me-1" />
+                        Faishon
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/">
+                        <FaBagShopping className="mb-1 me-1" /> Bags
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/">
+                        <GiRunningShoe className="mb-1 me-1" /> Footwear
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/">
+                        {" "}
+                        <FaBowlFood className="mb-1 me-1" />
+                        Groceries
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/">
+                        {" "}
+                        <CgGirl className="mb-1 me-1" />
+                        Beauty
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-sm-9 navTab d-flex align-items-center justify-content-center">
-            <ul className="mt-3 d-flex justify-content-around align-items-center">
+            <ul className="mt-2 d-flex justify-content-around align-items-center">
               <li>
                 <Link to="/">
                   {" "}
