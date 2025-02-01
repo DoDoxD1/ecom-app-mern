@@ -119,10 +119,27 @@ body {
   padding: 0;
 }
 
-.countryList li {
+.countryList li Button {
   list-style: none;
+  color: var(--dark-grey-name);
+  text-transform: capitalize;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px 10px;
+}
+
+.countryList li Button:hover {
+  background-color: #f1f1f1;
+}
+
+.countryList li Button.active {
+  background-color: #2bbef9;
+  color: white;
+}
+
+.countryList li Button.active .listButton {
+  background-color: #2bbef9;
+  color: white;
+  border: 1px solid white;
 }
 
 .countryList li .listButton {
@@ -221,8 +238,9 @@ body {
 
 /* navbar */
 
-nav {
+.navigation {
   width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .allCatTab Button {

@@ -11,7 +11,7 @@ import { FaBagShopping } from "react-icons/fa6";
 
 function Navbar() {
   return (
-    <nav className="pt-3 pb-3">
+    <nav className="pt-3 pb-1 navigation">
       <div className="container">
         <div className="row">
           <div className="col-sm-3 categories">
@@ -24,7 +24,7 @@ function Navbar() {
             </div>
           </div>
           <div className="col-sm-9 navTab d-flex align-items-center justify-content-center">
-            <ul className="d-flex justify-content-around align-items-center">
+            <ul className="mt-3 d-flex justify-content-around align-items-center">
               <li>
                 <Link to="/">
                   {" "}

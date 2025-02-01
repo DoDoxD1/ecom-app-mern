@@ -5,8 +5,10 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import Searchbar from "./Searchbar";
 import { RxCross2 } from "react-icons/rx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Slide from "@mui/material/Slide";
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -14,13 +16,43 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 function CountryDropDown() {
   const [isOpenModal, setisOpenModal] = useState(false);
+  const [selectedTab, setselectedTab] = useState("");
+  const [countryList, setcountryList] = useState([]);
+  const context = useContext(MyContext);
+
+  useEffect(() => {
+    setcountryList(context.countryList);
+  }, []);
+
+  const selectCountry = (index) => {
+    setselectedTab(countryList[index].country);
+    setisOpenModal(false);
+  };
+
+  function filterList(e) {
+    const keyword = e.target.value.toLowerCase();
+    if (keyword !== "") {
+      const list = countryList.filter((item) => {
+        return item.country.toLowerCase().includes(keyword);
+      });
+      setcountryList(list);
+    } else {
+      setcountryList(context.countryList);
+    }
+  }
 
   return (
     <div className="col-sm-2 d-flex-align-items-center part2">
       <Button id="countryDrop" onClick={() => setisOpenModal(true)}>
         <div className="info d-flex flex-column">
           <span className="label">Your Location</span>
-          <span className="name">Select a Location</span>
+          <span className="name">{`${
+            selectedTab === ""
+              ? "Select a Location"
+              : selectedTab.length > 12
+              ? selectedTab.substring(0, 15) + "...."
+              : selectedTab.substring(0, 15)
+          }`}</span>
         </div>
         <span className="ml-auto" id="dropdown-icon">
           <FaAngleDown />
@@ -43,53 +75,29 @@ function CountryDropDown() {
               <RxCross2 />
             </Button>
           </div>
-          <Searchbar placeholder={"Search your area"} />
+          <Searchbar placeholder={"Search your area"} onChange={filterList} />
           <div className="countryList ">
-            <ul className="list mt-3 " onClick={() => setisOpenModal(false)}>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Select a Location</span>{" "}
-                <Button className="listButton">Clear all</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">India</span>{" "}
-                <Button className="listButton">Min: $130</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Sri Lanks</span>{" "}
-                <Button className="listButton">Min: $160</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">America</span>{" "}
-                <Button className="listButton">Min: $150</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Canada</span>{" "}
-                <Button className="listButton">Min: $100</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Kenya</span>{" "}
-                <Button className="listButton">Min: $150</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">India</span>{" "}
-                <Button className="listButton">Min: $130</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Sri Lanks</span>{" "}
-                <Button className="listButton">Min: $160</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">America</span>{" "}
-                <Button className="listButton">Min: $150</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Canada</span>{" "}
-                <Button className="listButton">Min: $100</Button>
-              </li>
-              <li className="list-item d-flex justify-content-between">
-                <span className="text">Kenya</span>{" "}
-                <Button className="listButton">Min: $150</Button>
-              </li>
+            <ul className="list mt-3 ">
+              {countryList?.length !== 0 &&
+                countryList?.map((item, index) => {
+                  return (
+                    <li
+                      className="list-item d-flex justify-content-between w-100"
+                      onClick={() => selectCountry(index)}
+                      key={index}
+                    >
+                      <Button
+                        className={
+                          `${selectedTab === item.country ? "active " : ""}` +
+                          "countryButton d-flex justify-content-between w-100"
+                        }
+                      >
+                        <span className="text">{item.country}</span>{" "}
+                        <Button className="listButton">Min: $150</Button>
+                      </Button>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         </div>
