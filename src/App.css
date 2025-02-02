@@ -307,12 +307,13 @@ nav .catWrapper .sidebarNav ul {
 }
 
 .allCatTab Button.allCat {
-  width: 70%;
+  width: 60%;
   background-color: #2bbef9;
   color: white;
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: 600;
+  font-family: "Dosis", sans-serif;
 }
 
 nav ul {
@@ -345,6 +346,7 @@ nav ul li a svg {
 
 nav ul li {
   position: relative;
+  font-family: "Dosis", sans-serif;
 }
 
 nav ul li .submenu {
@@ -360,6 +362,7 @@ nav ul li .submenu {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
+  font-family: "Lato", serif;
 }
 
 nav ul li .submenu a {
