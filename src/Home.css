@@ -1,22 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.homeBannerSection .box {
+  position: relative;
+}
+.homeBannerSection .box .content {
+  position: absolute;
+  top: 80px;
+  left: 150px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.homeBannerSection .box .content .top {
+  font-family: "Dosis", sans-serif;
+}
+
+.homeBannerSection .box .content .top p {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.homeBannerSection .box .content .top span {
+  background-color: #77ffa956;
+  color: #038e42;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.homeBannerSection .box .content .heading h1 {
+  font-size: 50px;
+  font-weight: 800;
+  max-width: 450px;
+}
+
+.homeBannerSection .box .content .subheading p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.homeBannerSection .box .content .price span {
+  color: #d51243;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Dosis", sans-serif;
+}
+
+.homeBannerSection .box .content button {
+  background-color: #2bbef9;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.homeBannerSection .box .content button svg {
+  font-size: 25px;
+}
+
 .homeBannerSection .slick-arrow {
   z-index: 100;
   border-radius: 50px;
   height: 40px;
   width: 40px;
-  background-color: #444444;
+  font-size: 20px;
   font-weight: 800;
+}
+.homeBannerSection .sliderButton {
+  z-index: 100;
+  border-radius: 50px;
+  position: absolute;
+  padding: 30px 0px;
+  top: 50%;
+  font-size: 25px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  visibility: hidden;
+}
+.homeBannerSection .left {
+  left: 20px;
+}
+.homeBannerSection .right {
+  right: 20px;
 }
 .homeBannerSection .slick-next {
   right: 25px;
+  visibility: initial;
 }
 .homeBannerSection .slick-prev {
   left: 25px;
 }
-.homeBannerSection .slick-next::before {
+/* .homeBannerSection .slick-next::before {
   font-family: FontAwesome;
   color: #fff;
 }
 .homeBannerSection .slick-prev::before {
   font-family: FontAwesome;
   color: #fff;
-}
+} */

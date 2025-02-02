@@ -2,7 +2,7 @@ import Homebanner from "../Components/Home/Homebanner";
 
 const Home = () => {
   return (
-    <div className="mt-3 homeBannerSection">
+    <div className="homeBannerSection">
       <Homebanner />
     </div>
   );

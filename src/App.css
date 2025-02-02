@@ -261,7 +261,6 @@ nav .catWrapper .sidebarNav {
   top: 100%;
   left: 0px;
   margin-top: 18px;
-  border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   opacity: 0;
   visibility: hidden;
@@ -271,6 +270,24 @@ nav .catWrapper .sidebarNav {
 nav .catWrapper:hover .sidebarNav {
   opacity: 1;
   visibility: inherit;
+}
+
+nav .catWrapper .sidebarNav ul li {
+  position: static;
+}
+
+nav .catWrapper .sidebarNav ul li .submenu {
+  position: absolute;
+  top: -20px;
+  left: 100%;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  z-index: 100;
+  border-radius: 0px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 nav .catWrapper .sidebarNav li {
@@ -321,7 +338,7 @@ nav ul li a svg {
   font-size: 22px;
 }
 
-nav ul li a:hover {
+.navTab ul li a:hover {
   background-color: #f0faff;
   color: #2bbef9;
 }
@@ -356,4 +373,8 @@ nav ul li .submenu a {
 nav ul li:hover .submenu {
   opacity: 1;
   visibility: inherit;
+}
+
+nav ul li:hover .submenu a {
+  background-color: white;
 }

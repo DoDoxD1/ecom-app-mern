@@ -24,12 +24,19 @@ function Navbar() {
                   <span className="text">ALL CATEGORIES</span>
                   <FaAngleDown />
                 </Button>
-                <div className="sidebarNav shadow ">
+                <div className="sidebarNav  ">
                   <ul className="">
                     <li>
                       <Link to="/">
                         <FaMobileAlt className="mb-1 me-1" /> Electronics
                       </Link>
+                      <div className="submenu ">
+                        <Link to="/"> Mobiles</Link>
+                        <Link to="/"> Tablets</Link>
+                        <Link to="/"> Computers</Link>
+                        <Link to="/"> Smart Watches </Link>
+                        <Link to="/"> Refrigerators </Link>
+                      </div>
                     </li>
                     <li>
                       <Link to="/">
@@ -37,16 +44,31 @@ function Navbar() {
                         <FaTshirt className="mb-1 me-1" />
                         Faishon
                       </Link>
+                      <div className="submenu  ">
+                        <Link to="/"> Men</Link>
+                        <Link to="/"> Women</Link>
+                        <Link to="/"> Kids</Link>
+                      </div>
                     </li>
                     <li>
                       <Link to="/">
                         <FaBagShopping className="mb-1 me-1" /> Bags
                       </Link>
+                      <div className="submenu ">
+                        <Link to="/"> Handbag</Link>
+                        <Link to="/"> Women Bags</Link>
+                        <Link to="/"> Men Bags</Link>
+                      </div>
                     </li>
                     <li>
                       <Link to="/">
                         <GiRunningShoe className="mb-1 me-1" /> Footwear
                       </Link>
+                      <div className="submenu ">
+                        <Link to="/"> Men</Link>
+                        <Link to="/"> Women</Link>
+                        <Link to="/"> Kids</Link>
+                      </div>
                     </li>
                     <li>
                       <Link to="/">
@@ -54,6 +76,12 @@ function Navbar() {
                         <FaBowlFood className="mb-1 me-1" />
                         Groceries
                       </Link>
+                      <div className="submenu ">
+                        <Link to="/"> Daily</Link>
+                        <Link to="/"> Vegetables</Link>
+                        <Link to="/"> Foods</Link>
+                        <Link to="/"> Cafe</Link>
+                      </div>
                     </li>
                     <li>
                       <Link to="/">
