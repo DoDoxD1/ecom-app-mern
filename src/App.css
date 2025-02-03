@@ -319,6 +319,7 @@ nav .catWrapper .sidebarNav ul {
 
 nav ul {
   width: 100%;
+  padding: 0px;
 }
 
 nav ul li {
