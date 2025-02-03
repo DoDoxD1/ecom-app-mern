@@ -2,17 +2,15 @@ import Homebanner from "../Components/Home/Homebanner";
 import { Button } from "@mui/material";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import React from "react";
-import Slider from "react-slick";
 import data from "../data.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
 
 const Home = () => {
-  var productSliderOptions = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  };
   return (
     <div className="homeBannerSection">
       <Homebanner />
@@ -57,17 +55,29 @@ const Home = () => {
                 </Button>
               </div>
               <div className="product_row">
-                <Slider {...productSliderOptions}>
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={30}
+                  loop={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
+                >
                   {data.map(function (item, index) {
                     return (
-                      <div className="item productItem">
-                        <div className="imgWrapper">
-                          <img src={item.img} alt="" className="w-100" />
+                      <SwiperSlide>
+                        <div className="item productItem">
+                          <div className="imgWrapper">
+                            <img src={item.img} alt="" className="w-100" />
+                          </div>
                         </div>
-                      </div>
+                      </SwiperSlide>
                     );
                   })}
-                </Slider>
+                </Swiper>
               </div>
             </div>
           </div>
