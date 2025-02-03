@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+.cursor {
+  cursor: pointer;
+}
+
+.text-light {
+  color: #8b8b8b !important;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-sml {
+  font-size: 14px;
+}
+
 .homeBannerSection .box {
   position: relative;
 }
@@ -99,3 +115,52 @@
   font-family: FontAwesome;
   color: #fff;
 } */
+/* left side */
+.homeProducts {
+  padding: 25px 0px;
+  width: 100%;
+}
+
+.homeProducts .banner {
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+
+.homeProducts .banner .content {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+.homeProducts .banner .content .top p {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.homeProducts .banner .content .heading h1 {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+.homeProducts .banner .content .heading {
+  margin-bottom: 1rem;
+}
+
+.homeProducts .banner .content .subheading p {
+  margin-bottom: 0px;
+}
+
+.homeProducts .banner .content .price span {
+  font-family: "dosis", sans-serif;
+  font-weight: 600;
+  color: #d51243;
+  font-size: 30px;
+}
+
+.productRow .hd {
+  font-weight: 600;
+  font-family: "dosis", sans-serif;
+  font-size: 25px;
+}

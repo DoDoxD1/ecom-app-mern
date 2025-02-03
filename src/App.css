@@ -221,9 +221,10 @@ body {
 }
 
 .header .part-3 .cartTab .price {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--dark-grey-name);
-  font-weight: 700;
+  font-weight: 600;
+  font-family: "Dosis", sans-serif;
 }
 
 .cartTab .count {
