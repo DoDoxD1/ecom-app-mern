@@ -24,7 +24,7 @@ function Homebanner() {
       </Button>
 
       <Swiper
-        navigation={true}
+        navigation={false}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

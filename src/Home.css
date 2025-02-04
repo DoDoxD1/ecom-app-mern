@@ -159,6 +159,9 @@
   font-size: 30px;
 }
 
+.productRow {
+  padding: 1px;
+}
 .productRow .hd {
   font-weight: 600;
   font-family: "dosis", sans-serif;
@@ -177,4 +180,61 @@
 
 .viewAllBtn svg {
   font-size: 25px;
+}
+
+/* product item styling */
+
+.item {
+  border: 1px solid rgba(85, 85, 85, 0.1);
+  border-radius: 5px;
+  position: relative;
+}
+
+.item .discount {
+  position: absolute;
+  top: 1.125rem;
+  left: 1.125rem;
+  background-color: #2bbef9;
+  padding: 0.25rem 0.725rem;
+  color: white;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.item .description {
+  padding: 10px 20px;
+}
+
+.item .imgWrapper {
+  padding: 20px;
+}
+
+.item .description .title {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.item .inStock {
+  color: #00b853;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Dosis", sans-serif;
+}
+
+.item .description .price {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+}
+
+.item .description .oldPrice {
+  color: rgba(0, 0, 0, 0.2);
+  text-decoration: line-through;
+  font-size: 16px;
+}
+
+.item .description .newPrice {
+  color: #d51243;
+  font-size: 20px;
 }

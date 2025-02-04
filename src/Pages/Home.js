@@ -3,8 +3,9 @@ import { Button } from "@mui/material";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import React from "react";
 import data from "../data.js";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Rating from "@mui/material/Rating";
 
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -56,22 +57,44 @@ const Home = () => {
               </div>
               <div className="product_row">
                 <Swiper
-                  slidesPerView={3}
-                  spaceBetween={30}
+                  slidesPerView={4}
+                  spaceBetween={10}
                   loop={true}
                   pagination={{
                     clickable: true,
                   }}
-                  navigation={true}
+                  navigation={false}
                   modules={[Pagination, Navigation]}
                   className="mySwiper"
                 >
                   {data.map(function (item, index) {
                     return (
-                      <SwiperSlide>
+                      <SwiperSlide key={index}>
                         <div className="item productItem">
                           <div className="imgWrapper">
                             <img src={item.img} alt="" className="w-100" />
+                          </div>
+                          <div className="description">
+                            <span className="discount">{item.discount}%</span>
+                            <h6 className="title">{item.title}</h6>
+                            <span className="d-block inStock mb-1">
+                              IN STOCK
+                            </span>
+                            <Rating
+                              name="read-only"
+                              value={item.rating}
+                              precision={0.5}
+                              size="small"
+                              readOnly
+                            />
+                            <div className="price d-flex align-items-baseline">
+                              <span className="oldPrice me-1">
+                                ${item.oldPrice}
+                              </span>
+                              <span className="newPrice ms-1">
+                                ${item.newPrice}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </SwiperSlide>
