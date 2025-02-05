@@ -9,7 +9,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import ProductItem from "./ProductItem.js";
 function NewProducts() {
   return (
-    <div className="productRow newProducts">
+    <div className=" newProducts">
       <div className="d-flex align-items-center">
         <div className="info w-75">
           <h3 className="mb-0 hd">NEW PRODUCTS</h3>
@@ -22,26 +22,14 @@ function NewProducts() {
           <IoIosArrowRoundForward />
         </Button>
       </div>
-      <div className="product_row">
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={10}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={false}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {data.map(function (elem, index) {
-            return (
-              <SwiperSlide key={index}>
-                <ProductItem item={elem} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+      <div className="productRow2 d-flex">
+        {data.map(function (elem, index) {
+          return (
+            <div className="newProductItem" key={index}>
+              <ProductItem item={elem} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
