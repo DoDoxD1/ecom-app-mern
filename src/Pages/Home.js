@@ -3,13 +3,13 @@ import { Button } from "@mui/material";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import React from "react";
 import data from "../data.js";
-import Rating from "@mui/material/Rating";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import ProductItem from "../Components/Home/ProductItem.js";
 
 const Home = () => {
   return (
@@ -67,36 +67,10 @@ const Home = () => {
                   modules={[Pagination, Navigation]}
                   className="mySwiper"
                 >
-                  {data.map(function (item, index) {
+                  {data.map(function (elem, index) {
                     return (
                       <SwiperSlide key={index}>
-                        <div className="item productItem">
-                          <div className="imgWrapper">
-                            <img src={item.img} alt="" className="w-100" />
-                          </div>
-                          <div className="description">
-                            <span className="discount">{item.discount}%</span>
-                            <h6 className="title">{item.title}</h6>
-                            <span className="d-block inStock mb-1">
-                              IN STOCK
-                            </span>
-                            <Rating
-                              name="read-only"
-                              value={item.rating}
-                              precision={0.5}
-                              size="small"
-                              readOnly
-                            />
-                            <div className="price d-flex align-items-baseline">
-                              <span className="oldPrice me-1">
-                                ${item.oldPrice}
-                              </span>
-                              <span className="newPrice ms-1">
-                                ${item.newPrice}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                        <ProductItem item={elem} />
                       </SwiperSlide>
                     );
                   })}
