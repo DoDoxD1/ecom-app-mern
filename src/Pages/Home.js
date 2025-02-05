@@ -1,82 +1,42 @@
 import Homebanner from "../Components/Home/Homebanner";
-import { Button } from "@mui/material";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import React from "react";
-import data from "../data.js";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
-import ProductItem from "../Components/Home/ProductItem.js";
+import BestSellers from "../Components/Home/BestSellers.js";
+import NewProducts from "../Components/Home/NewProducts.js";
 
 const Home = () => {
   return (
     <div className="homeBannerSection">
       <Homebanner />
       <section className="homeProducts">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3">
-              <div className="banner">
-                <div className="content">
-                  <div className="top">
-                    <p>Bacola Natural Foods</p>
-                  </div>
-                  <div className="heading">
-                    <h1>Special Organic </h1>
-                    <h1 className="text-bold">Roats Burger</h1>
-                  </div>
-                  <div className="subheading">
-                    <p>only-from</p>
-                  </div>
-                  <div className="price d-flex align-items-baseline">
-                    <span className="">$14.35</span>
-                  </div>
+        <div className="container d-flex">
+          <div className="col-md-3 sidebar">
+            <div className="banner">
+              <div className="content">
+                <div className="top">
+                  <p>Bacola Natural Foods</p>
                 </div>
-                <img
-                  src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg"
-                  alt=""
-                  className="cursor"
-                />
-              </div>
-            </div>
-            <div className="col-md-9 productRow">
-              <div className="d-flex align-items-center">
-                <div className="info w-75">
-                  <h3 className="mb-0 hd">BEST SELLERS</h3>
-                  <p className="text-light text-sml">
-                    Do not miss the current offers until the end of March.
-                  </p>
+                <div className="heading">
+                  <h1>Special Organic </h1>
+                  <h1 className="text-bold">Roats Burger</h1>
                 </div>
-                <Button className="viewAllBtn ms-auto">
-                  View All
-                  <IoIosArrowRoundForward />
-                </Button>
+                <div className="subheading">
+                  <p>only-from</p>
+                </div>
+                <div className="price d-flex align-items-baseline">
+                  <span className="">$14.35</span>
+                </div>
               </div>
-              <div className="product_row">
-                <Swiper
-                  slidesPerView={4}
-                  spaceBetween={10}
-                  loop={true}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={false}
-                  modules={[Pagination, Navigation]}
-                  className="mySwiper"
-                >
-                  {data.map(function (elem, index) {
-                    return (
-                      <SwiperSlide key={index}>
-                        <ProductItem item={elem} />
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
-              </div>
+              <img
+                src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg"
+                alt=""
+                className="cursor"
+              />
             </div>
+          </div>
+          <div className="col-md-9 mainContent">
+            <BestSellers />
+            <div className="mt-3" />
+            <NewProducts />
           </div>
         </div>
       </section>
