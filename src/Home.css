@@ -294,6 +294,8 @@
   font-size: 20px;
 }
 
+/* new products section */
+
 .productRow2 {
   flex-wrap: wrap;
   gap: 20px 10px;
@@ -301,4 +303,36 @@
 
 .newProductItem {
   width: 24%;
+}
+
+/* take care banner */
+
+.careBanner {
+  background-color: #f8efea;
+  border-radius: 8px;
+}
+
+.careBanner .headings {
+  padding-left: 2.5rem;
+  height: auto;
+}
+
+.careBanner .headings h6 {
+  font-size: 14px;
+  color: #8b8b8b;
+}
+
+.careBanner .headings h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #737373;
+  margin-bottom: 0px;
+}
+
+.careBanner .imgWrapper {
+  overflow-clip-margin: content-box;
+}
+
+.careBanner .imgWrapper img {
+  object-fit: cover;
 }
