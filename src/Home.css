@@ -535,3 +535,84 @@
 .trending .products .newPrice {
   font-size: 18px;
 }
+
+/* newsletter section */
+
+.newsLetter {
+  background-color: #233a95;
+  padding: 50px 160px;
+  position: relative;
+  min-height: 350px;
+  color: white;
+  margin-bottom: 1000px;
+}
+
+.newsLetter .content {
+  padding: 15px;
+}
+
+.newsLetter .content h6 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.newsLetter .content h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.newsLetter .content p {
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 70%;
+  color: #cccccc99;
+}
+
+.newsLetter .imgWrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 160px;
+}
+
+.newsLetter .emailinput {
+  position: relative;
+  padding: 18px 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 25rem;
+  background-color: white;
+}
+
+.newsLetter .emailinput input {
+  outline: none;
+  border: none;
+  color: #646464;
+  font-size: 14 px;
+  width: 85%;
+}
+
+.newsLetter .emailinput input::placeholder {
+  color: #c2c2d3;
+}
+
+.newsLetter .emailinput svg {
+  position: absolute;
+  color: #c2c2d3;
+  top: 18px;
+  font-size: 20px;
+  left: 20px;
+}
+
+.newsLetter .emailinput button {
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+  padding: 12px 10px;
+  background-color: #233a95;
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 14px;
+}

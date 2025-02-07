@@ -6,6 +6,8 @@ import NewProducts from "../Components/Home/NewProducts.js";
 import Sidebar from "../Components/Home/Sidebar.js";
 import safetyImg from "../assets/images/safety.png";
 
+import NewsLetter from "../Components/Home/NewsLetter.js";
+
 const Home = () => {
   return (
     <div className="homeBannerSection">
@@ -39,6 +41,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <NewsLetter />
+      <footer></footer>
     </div>
   );
 };
