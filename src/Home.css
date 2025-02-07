@@ -291,18 +291,21 @@
   font-family: "Dosis", sans-serif;
 }
 
-.item .description .price {
+.item .description .price,
+.price {
   font-family: "Dosis", sans-serif;
   font-weight: 600;
 }
 
-.item .description .oldPrice {
+.item .description .oldPrice,
+.oldPrice {
   color: rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
   font-size: 16px;
 }
 
-.item .description .newPrice {
+.item .description .newPrice,
+.newPrice {
   color: #d51243;
   font-size: 20px;
 }
@@ -464,7 +467,7 @@
 /* sidebar download app section */
 
 .sidebar .sideSection {
-  border: 1px solid #8b8b8bb9;
+  border: 1px solid #d2d2d2af;
   border-radius: 5px;
   width: 90%;
 }
@@ -475,7 +478,7 @@
 
 .sidebar .sideSection .subSection {
   padding: 22px 30px;
-  border-bottom: 1px solid #8b8b8bb9;
+  border-bottom: 1px solid #d2d2d2af;
 }
 
 .sidebar .sideSection .subSection:last-child {
@@ -492,4 +495,43 @@
 .sidebar .sideSection svg {
   font-size: 40px;
   color: #242424c5;
+}
+
+/* treding product */
+
+.trending {
+  width: 90%;
+}
+
+.trending h3 {
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.trending .products {
+  padding: 1.5rem 20px;
+  border-radius: 5px;
+  border: 1px solid #d2d2d26d;
+}
+
+.trending .products .wrapper {
+  max-width: 90px;
+}
+
+.trending .products .content h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.trending .products .product {
+  margin-top: 2rem;
+}
+
+.trending .products .product:first-child {
+  margin-top: 0rem;
+}
+
+.trending .products .newPrice {
+  font-size: 18px;
 }

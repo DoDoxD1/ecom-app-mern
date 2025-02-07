@@ -1,9 +1,7 @@
-import { FaAppStore } from "react-icons/fa";
-import { LuShoppingCart } from "react-icons/lu";
-import { CiClock1 } from "react-icons/ci";
 import download from "../../assets/images/download.png";
 import order from "../../assets/images/order.png";
 import clock from "../../assets/images/clock.png";
+import TrendingProducts from "./TrendingProducts";
 
 function Sidebar() {
   return (
@@ -72,6 +70,7 @@ function Sidebar() {
           <p>Download the Mobile App to your Phone.</p>
         </div>
       </div>
+      <TrendingProducts />
     </div>
   );
 }
