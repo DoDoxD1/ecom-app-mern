@@ -460,3 +460,36 @@
   border-radius: 50px;
   font-weight: 600;
 }
+
+/* sidebar download app section */
+
+.sidebar .sideSection {
+  border: 1px solid #8b8b8bb9;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.sidebar .sideSection .wrapper {
+  width: 40px;
+}
+
+.sidebar .sideSection .subSection {
+  padding: 22px 30px;
+  border-bottom: 1px solid #8b8b8bb9;
+}
+
+.sidebar .sideSection .subSection:last-child {
+  border-bottom: none;
+}
+
+.sidebar .sideSection p {
+  margin: 0px;
+  font-size: 12px;
+  margin-left: 1rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar .sideSection svg {
+  font-size: 40px;
+  color: #242424c5;
+}

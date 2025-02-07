@@ -1,3 +1,10 @@
+import { FaAppStore } from "react-icons/fa";
+import { LuShoppingCart } from "react-icons/lu";
+import { CiClock1 } from "react-icons/ci";
+import download from "../../assets/images/download.png";
+import order from "../../assets/images/order.png";
+import clock from "../../assets/images/clock.png";
+
 function Sidebar() {
   return (
     <div className="col-md-3 sidebar">
@@ -44,6 +51,26 @@ function Sidebar() {
           alt=""
           className="cursor"
         />
+      </div>
+      <div className="sideSection d-flex flex-column mt-5">
+        <div className="d-flex justify-content-center align-items-center subSection">
+          <div className="wrapper">
+            <img src={download} alt="" height={35} />
+          </div>
+          <p>Download the Mobile App to your Phone.</p>
+        </div>
+        <div className="d-flex justify-content-center align-items-center subSection">
+          <div className="wrapper">
+            <img src={order} alt="" height={35} />
+          </div>
+          <p>Download the Mobile App to your Phone.</p>
+        </div>
+        <div className="d-flex justify-content-center align-items-center subSection">
+          <div className="wrapper">
+            <img src={clock} alt="" height={35} />
+          </div>
+          <p>Download the Mobile App to your Phone.</p>
+        </div>
       </div>
     </div>
   );
