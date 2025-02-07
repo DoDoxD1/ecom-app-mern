@@ -16,8 +16,12 @@
   font-weight: 700 !important;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .text-sml {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .space-bottom {
@@ -408,7 +412,7 @@
   width: 90%;
   background-color: #edeef5;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin: 0.75rem 0px;
 }
 
 .hotProducts .progress-done {
@@ -434,4 +438,25 @@
 
 .timer-text {
   max-width: 140px;
+}
+
+/* counpon section */
+
+.couponSetion {
+  background-color: #ffeef2;
+  padding: 20px 0px;
+  border-radius: 10px;
+}
+
+.couponSetion p {
+  color: #ed174a;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+.couponSetion .coupon {
+  border: 1px dotted #ed174a;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-weight: 600;
 }

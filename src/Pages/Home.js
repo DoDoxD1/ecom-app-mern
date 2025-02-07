@@ -27,6 +27,14 @@ const Home = () => {
               </div>
             </div>
             <HotProduct />
+            <div className="couponSetion space-bottom d-flex align-items-center justify-content-center">
+              <p>Super discount for your &nbsp;</p>
+              <p className="underline text-bold">first purchase.</p>
+              <p className="coupon me-3 ms-3">FREE25BAC</p>
+              <p className="text-light text-sml">
+                Use discount code in checkout!
+              </p>
+            </div>
             <NewProducts />
           </div>
         </div>
